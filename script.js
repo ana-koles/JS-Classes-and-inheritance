@@ -3,7 +3,7 @@ function Builder (value) {
 }
 
 Builder.prototype.plus = function () {
-        let arr = [...arguments];
+        const arr = [...arguments];
         this.value = arr.reduce((sum, current) => sum += current, this.value);
         console.log(this.value);
         return this;
@@ -89,7 +89,7 @@ StringBuilder.prototype.multiply = function(int) {
 };
 
 StringBuilder.prototype.divide = function(n) {
-    let k = Math.floor(this.value.length / n);
+    const k = Math.floor(this.value.length / n);
     this.value = this.value.split('').slice(0, k).join('');
     console.log(this.value);
     return this;
